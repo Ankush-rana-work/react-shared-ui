@@ -16,15 +16,15 @@ export default defineConfig({
 
     rollupOptions: {
       external: [
-        'react',
-        'react-dom',
+        /^react(\/.*)?$/,
+        /^react-dom(\/.*)?$/,
         '@mui/material',
         '@mui/icons-material',
         '@emotion/react',
         '@emotion/styled',
         'react-select',
         'chart.js',
-        'react-chartjs-2'
+        'react-chartjs-2',
       ]
     }
   }
