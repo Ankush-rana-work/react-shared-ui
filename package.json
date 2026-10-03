@@ -5,12 +5,13 @@
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && tsc -p tsconfig.types.json",
     "lint": "eslint .",
     "preview": "vite preview",
     "build:watch": "tsc && vite build --watch"
